@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>Clicker Clicker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="index.css">
+  
+  <!-- Ajouter un style pour l'arrière-plan ici -->
+  <style>
+    body {
+      background-image: url('image/th.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  </style>
+</head>
+<body onbeforeunload="return closingCode()">
+  <div class='topbar'>
+    <a href='https://rule34.xxx/'>Clicker Clicker</a>
+  </div>
+  <center class='center'>
+    <h1 id='total' class="text-white">polo: 0</h1>
+    <h5 id="click" class="text-white" style="font-family: trebuchet MS;">polo/click: 1 | polo/sec: 0</h5>
+    <img class="round" src="./image/polo.jpg" width="150" onclick='clicked()'></img>
+    <br><br>
+    <button id='upgrade' class="round" onclick='upgrade("upgrade")' style="font-family:courier;">0-main upgrade: 15</button>
+    <br><br>
+    <button id='cat' class="round" onclick='upgrade("clicker cat")' style="font-family:courier;">0-clicker cat: 25 | +1/sec</button>
+    <br><br>
+    <button id='worker' class="round" onclick='upgrade("worker")' style="font-family:courier;">0-worker: 250 | +15/sec</button><br><br>
+    <button class="settings" onclick="save()">Save</button>
+    <button class="settings" onclick="load()">Load</button>
+    <button class="settings" onclick="reset()">Reset</button><br><br>
+    <center class='center'>
+        <!-- ...vos éléments existants... -->
+      
+        <!-- Section pour les succès déverrouillés -->
+        <div id="achievements" style="margin-top: 20px;">
+          <h2 class="text-white">Succès</h2>
+          <h5 class="text-white">coming soon</h5>
+          <ul id="achievements-list"></ul>
+        </div>
+      </center>
+      
+  </center>
+  <div class="version">
+    <h1 class="text-white">version 1.0</h1>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
